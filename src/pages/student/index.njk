@@ -1,0 +1,349 @@
+---
+layout: index.njk
+showHeader: true
+title: Lesson
+Path: "../../assets/images/"
+---
+
+{% set lessons = [ { title: "Grammar Basics", status: "Completed", lesson:
+"Lesson 1/12", description: "Introduction to sentence structure.Introduction to
+sentence structure.Introduction to sentence structure.", date: "Thursday, 30 Oct
+2024", time: "03:00 PM – 03:30 PM" },{ title: "Grammar Basics", status:
+"Completed", lesson: "Lesson 2/12", description: "Introduction to sentence
+structure.Introduction to sentence structure.Introduction to sentence
+structure.", date: "Thursday, 30 Oct 2024", time: "03:00 PM – 03:30 PM" }, {
+title: "Grammar Basics", status: "Completed", lesson: "Lesson 3/12",
+description: "Introduction to sentence structure.Introduction to sentence
+structure.Introduction to sentence structure.", date: "Thursday, 30 Oct 2024",
+time: "03:00 PM – 03:30 PM" }, { isTodayLesson:true, title: "Grammar Basics",
+status: "Today’s Lesson", lesson: "Lesson 4/12", description: "Mastering commas,
+periods, and other punctuation marks. Introduction to sentence structure.",
+date: "Thursday, 30 Oct 2024", time: "03:00 PM – 03:30 PM", cta: "Join Lesson",
+countdown: [ { label: "Days", value: "00" }, { label: "Hours", value: "00" }, {
+label: "Minutes", value: "20" }, { label: "Seconds", value: "30" } ] }, { title:
+"Essay Writing Techniques", status: "Upcoming", lesson: "Lesson 5/12",
+description: "Learn how to structure and write compelling essays. Introduction
+to sentence structure.", date: "Thursday, 30 Oct 2024", time: "03:00 PM – 03:30
+PM", cta: 'Book Lesson' }, { title: "Essay Writing Techniques", status:
+"Upcoming", lesson: "Lesson 6/12", description: "Learn how to structure and
+write compelling essays. Introduction to sentence structure.", date: "Thursday,
+30 Oct 2024", time: "03:00 PM – 03:30 PM" }, { title: "Essay Writing
+Techniques", status: "Upcoming", lesson: "Lesson 7/12", description: "Learn how
+to structure and write compelling essays. Introduction to sentence structure.",
+date: "Thursday, 30 Oct 2024", time: "03:00 PM – 03:30 PM" }, { title: "Essay
+Writing Techniques", status: "Upcoming", lesson: "Lesson 8/12", description:
+"Learn how to structure and write compelling essays. Introduction to sentence
+structure.", date: "Thursday, 30 Oct 2024", time: "03:00 PM – 03:30 PM" }, {
+title: "Essay Writing Techniques", status: "Upcoming", lesson: "Lesson 9/12",
+description: "Learn how to structure and write compelling essays. Introduction
+to sentence structure.", date: "Thursday, 30 Oct 2024", time: "03:00 PM – 03:30
+PM" }, { title: "Essay Writing Techniques", status: "Upcoming", lesson: "Lesson
+10/12", description: "Learn how to structure and write compelling essays.
+Introduction to sentence structure.", date: "Thursday, 30 Oct 2024", time:
+"03:00 PM – 03:30 PM" }, { title: "Essay Writing Techniques", status:
+"Upcoming", lesson: "Lesson 11/12", description: "Learn how to structure and
+write compelling essays. Introduction to sentence structure.", date: "Thursday,
+30 Oct 2024", time: "03:00 PM – 03:30 PM" }, { title: "Essay Writing
+Techniques", status: "Upcoming", lesson: "Lesson 12/12", description: "Learn how
+to structure and write compelling essays. Introduction to sentence structure.",
+date: "Thursday, 30 Oct 2024", time: "03:00 PM – 03:30 PM" } ] %} {% set
+profiles = [ { name: "Michael Kopfler", rank: 1, progress: "85% Complete", img:
+"leaderboard-profiles-img-1.jpg" }, { name: "Michael Kopfler", rank: 2,
+progress: "80% Complete", img: "leaderboard-profiles-img-2.jpg" }, { name:
+"Michael Kopfler", rank: 1, progress: "75% Complete", img:
+"leaderboard-profiles-img-3.jpg" }, { name: "Michael Kopfler", rank: 1,
+progress: "75% Complete", img: "leaderboard-profiles-img-4.jpg" }, { name:
+"Michael Kopfler", rank: 1, progress: "75% Complete", img:
+"leaderboard-profiles-img-5.jpg" }, { name: "Michael Kopfler", rank: 1,
+progress: "75% Complete", img: "leaderboard-profiles-img-6.jpg" }, { name:
+"Michael Kopfler", rank: 1, progress: "75% Complete", img:
+"leaderboard-profiles-img-1.jpg" }, { name: "Michael Kopfler", rank: 1,
+progress: "75% Complete", img: "leaderboard-profiles-img-2.jpg" }, { name:
+"Michael Kopfler", rank: 1, progress: "75% Complete", img:
+"leaderboard-profiles-img-3.jpg" }, { name: "Michael Kopfler", rank: 1,
+progress: "75% Complete", img: "leaderboard-profiles-img-4.jpg" }, { name:
+"Michael Kopfler", rank: 1, progress: "75% Complete", img:
+"leaderboard-profiles-img-5.jpg" }, { name: "Michael Kopfler", rank: 1,
+progress: "75% Complete", img: "leaderboard-profiles-img-6.jpg" } ] %} {% set
+cards = [ { "count": 12, "label": "Total", "bgClass": "twg-bg-primary-100",
+"imgSrc": "lesson-total-banner.svg", "isRelative": false, "extraImg": null,
+"textColor": "twg-text-white" }, { "count": 2, "label": "Completed", "bgClass":
+"twg-bg-success-200", "imgSrc": "completed-img-wrapper.svg", "isRelative": true,
+"extraImg": { "src": "bella-1-wrapper.svg", "class": "twg-absolute -twg-top-17px
+twg-right-2" }, "textColor": "twg-text-white" }, { "count": 10, "label":
+"Upcoming", "bgClass": "twg-border-light-600 twg-border twg-border-dashed",
+"imgSrc": null, "isRelative": false, "extraImg": null, "textColor":
+"twg-text-light-700" } ] %}
+
+<section
+  class="twg-flex-1 twg-pt-5 twg-flex twg-h-full lg:twg-pr-4 max-lg:twg-flex-col max-lg:twg-overflow-y-auto max-lg:twg-px-4 max-lg:twg-space-y-6 max-lg:twg-pb-5 twg-relative twg-main-content-section"
+>
+  {% set activeNavLink = "Lessons" %} {% include "sidebar.njk" %}
+  <div
+    class="twg-lesson-content twg-main-wrapper-content lg:twg-flex-1 lg:twg-overflow-y-auto lg:twg-pl-5 lg:twg-pr-3 max-lg:!twg-mt-0"
+  >
+    <h1 class="main-heading">Lessons</h1>
+    <div
+      class="lg:twg-mt-20px max-lg:twg-mt-8px lg:twg-mb-30px max-lg:twg-mb-15px twg-grid twg-grid-cols-3 lg:twg-gap-5 mm-sm-lg:twg-gap-3 max-sm:twg-gap-2"
+    >
+      <div class="twg-bg-primary-100 twg-rounded-lg twg-overflow-hidden">
+        <div class="twg-flex twg-h-full">
+          <div
+            class="sm:twg-p-5 max-sm:twg-p-3 twg-flex sm:twg-items-end twg-justify-center twg-flex-col twg-flex-1"
+          >
+            <div class="twg-text-center">
+              <h4 class="twg-text-16px twg-font-bold twg-text-white">12</h4>
+              <h4 class="twg-text-12px twg-text-white twg-uppercase">Total</h4>
+            </div>
+          </div>
+          <img
+            src="{{ Path }}lesson-total-banner.svg"
+            class="twg-aspect-square max-sm:twg-hidden"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="twg-relative">
+        <div class="twg-bg-success-200 twg-rounded-lg twg-relative">
+          <div
+            class="sm:twg-p-5 max-sm:twg-p-3 twg-flex twg-items-center twg-h-full"
+          >
+            <div
+              class="twg-flex sm:twg-items-end twg-justify-center twg-flex-col twg-flex-1"
+            >
+              <div class="twg-text-center">
+                <h4 class="twg-text-16px twg-font-bold twg-text-white">2</h4>
+                <h4 class="twg-text-12px twg-text-white twg-uppercase">
+                  Completed
+                </h4>
+              </div>
+            </div>
+            <img
+              src="{{ Path }}completed-img-wrapper.svg"
+              class="max-sm:twg-hidden"
+              alt=""
+            />
+          </div>
+        </div>
+        <img
+          src="{{ Path }}bella-1-wrapper.svg"
+          class="twg-absolute -twg-top-17px twg-right-2 max-sm:twg-hidden"
+          alt=""
+        />
+      </div>
+      <div
+        class="twg-border-light-600 twg-border twg-border-dashed twg-rounded-lg twg-overflow-hidden"
+      >
+        <div
+          class="sm:twg-p-5 max-sm:twg-p-3 twg-flex twg-items-center twg-justify-center twg-flex-col twg-flex-1"
+        >
+          <div class="twg-text-center">
+            <h4 class="twg-text-16px twg-font-bold twg-text-light-700">10</h4>
+            <h4 class="twg-text-12px twg-text-light-700 twg-uppercase">
+              Upcoming
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="twg-flex md:twg-items-center md:twg-justify-between max-md:twg-gap-2 max-md:twg-flex-col"
+    >
+      <h1 class="main-heading">Schedule a Lesson</h1>
+      <div
+        class="twg-flex twg-items-center md:twg-justify-end max-md:twg-flex-wrap twg-gap-10px"
+      >
+        <div class="twg-relative select-container">
+          <select
+            class="twg-text-10px twg-font-semibold twg-rounded-10px twg-border !twg-border-light-800 twg-text-dark-100 !twg-ring-0 !twg-outline-none !twg-shadow-none twg-leading-[17px] twg-uppercase twg-h-37px twg-w-116px"
+          >
+            <option
+              value="mathematics"
+              class="twg-text-10px twg-text-dark-100"
+              selected
+            >
+              Mathematics
+            </option>
+            <option value="profile1" class="twg-text-10px twg-text-dark-100">
+              Profile 1
+            </option>
+            <option value="profile2" class="twg-text-10px twg-text-dark-100">
+              Profile 2
+            </option>
+            <option value="profile3" class="twg-text-10px twg-text-dark-100">
+              Profile 3
+            </option>
+          </select>
+        </div>
+        <div class="twg-relative select-container">
+          <select
+            class="twg-text-10px twg-font-semibold twg-rounded-10px twg-border !twg-border-light-800 twg-text-dark-100 !twg-ring-0 !twg-outline-none !twg-shadow-none twg-leading-[17px] twg-uppercase twg-h-37px twg-w-99px"
+          >
+            <option
+              value="available"
+              class="twg-text-10px twg-text-dark-100"
+              selected
+            >
+              Available
+            </option>
+            <option value="profile1" class="twg-text-10px twg-text-dark-100">
+              Profile 1
+            </option>
+            <option value="profile2" class="twg-text-10px twg-text-dark-100">
+              Profile 2
+            </option>
+            <option value="profile3" class="twg-text-10px twg-text-dark-100">
+              Profile 3
+            </option>
+          </select>
+        </div>
+        <a href="/pages/student/schedule" class="twg-main-btn sm:twg-w-114px">
+          Schedule
+        </a>
+      </div>
+    </div>
+    <div
+      class="twg-grid mm-md-2xl:twg-grid-cols-2 2xl:twg-grid-cols-3 twg-gap-5 twg-mt-10px twg-pb-6px"
+    >
+      {% for lesson in lessons %}
+      <a href="/pages/student/session/" class="twg-h-full">
+        <div
+          class="twg-border twg-h-full twg-border-dark-100/30 twg-rounded-10px twg-custom-shadow twg-p-16px {%if lesson.isTodayLesson %} twg-bg-secondary-400 {%endif%} twg-flex twg-flex-col"
+        >
+          <div class="twg-flex twg-items-start twg-justify-between twg-gap-4">
+            <div class="twg-relative">
+              <h3
+                class="lg:twg-text-16px max-lg:twg-text-14px twg-font-medium twg-text-dark-100"
+              >
+                {{ lesson.title }}
+              </h3>
+              <h5
+                class="lg:twg-text-14px max-lg:twg-text-13px twg-text-light-800"
+              >
+                {{ lesson.lesson }}
+              </h5>
+            </div>
+            <div
+              class="twg-rounded-4px twg-overflow-hidden twg-border twg-h-21px twg-grid twg-place-items-center twg-uppercase twg-text-10px twg-font-medium twg-px-2 {% if lesson.isTodayLesson %} twg-bg-secondary-500 twg-text-primary-100 twg-border-primary-100 {% elseif lesson.status == 'Upcoming' %} twg-bg-accent-200 twg-text-light-500 twg-border-light-500 {% else %} twg-bg-success-300 twg-text-success-200 twg-border-success-200 {% endif %}"
+            >
+              {{ lesson.status }}
+            </div>
+          </div>
+          <p
+            class="lg:twg-text-14px max-lg:twg-text-13px twg-text-dark-100 twg-mt-1 twg-mb-2"
+          >
+            {{ lesson.description }}
+          </p>
+          <div
+            class="twg-flex twg-items-center twg-justify-between twg-gap-4 twg-mt-auto"
+          >
+            <h5
+              class="lg:twg-text-14px max-lg:twg-text-13px twg-text-light-800"
+            >
+              {{ lesson.date }}
+            </h5>
+            <h5
+              class="lg:twg-text-14px max-lg:twg-text-13px twg-text-light-800"
+            >
+              {{ lesson.time }}
+            </h5>
+          </div>
+          {%if lesson.countdown %}
+          <div class="twg-flex twg-gap-4 twg-mt-2px">
+            {% for item in lesson.countdown %}
+            <div
+              class="twg-text-center {% if not loop.first %}twg-flex-1{% endif %}"
+            >
+              <h3
+                class="lg:twg-text-20px max-lg:twg-text-17px twg-font-semibold twg-text-dark-100"
+              >
+                {{ item.value }}
+              </h3>
+              <p class="twg-text-12px twg-text-dark-100 twg-uppercase">
+                {{ item.label }}
+              </p>
+            </div>
+            {% if not loop.last %}
+            <h3
+              class="lg:twg-text-20px max-lg:twg-text-17px twg-font-semibold twg-text-dark-100 twg-self-start twg-leading-none twg-mt-3px"
+            >
+              :
+            </h3>
+            {% endif %} {% endfor %}
+          </div>
+          {% endif %} {%if lesson.cta %}
+          <button
+            class="twg-mt-5 twg-px-14px twg-py-10px twg-leading-none twg-rounded-lg twg-text-14px twg-font-medium twg-uppercase twg-transition-opacity twg-duration-300 twg-ease-linear hover:twg-opacity-80 twg-h-37px twg-w-full {%if lesson.isTodayLesson %}twg-bg-primary-100 twg-text-white{% else %} twg-bg-secondary-100 twg-text-dark-100{% endif %}"
+          >
+            {{ lesson.cta }}
+          </button>
+          {% endif %}
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  <div
+    class="twg-lesson-content twg-main-wrapper-content lg:twg-h-full lg:twg-overflow-y-auto lg:twg-w-[362px] max-lg:twg-w-full max-lg:twg-pb-2 twg-border twg-border-dark-100/30 twg-rounded-10px twg-custom-shadow twg-pt-6 twg-px-4 lg:twg-ml-3 twg-hide-scrollbar"
+  >
+    <h3 class="main-heading twg-flex twg-gap-2">
+      <span>Leaderboard</span>
+      <img
+        src="{{ Path }}3d-gold-trophy.jpg"
+        class="lg:twg-size-30px max-lg:twg-size-24px"
+        alt=""
+      />
+    </h3>
+    <div
+      class="lg:twg-mt-5 max-lg:twg-mt-3 twg-flex twg-flex-col twg-items-center twg-justify-center twg-text-center"
+    >
+      <img
+        src="{{ Path }}leaderboard-profile-img.jpg"
+        class="lg:twg-w-77px max-lg:twg-w-60px"
+        alt=""
+      />
+      <h4
+        class="twg-mt-2 twg-mb-3 lg:twg-text-20px max-lg:twg-text-17px twg-font-semibold twg-text-dark-100"
+      >
+        John Doe
+      </h4>
+      <button
+        class="twg-px-14px twg-py-10px twg-leading-none twg-bg-dark-100 twg-border twg-border-dark-100 twg-rounded-full twg-text-14px twg-font-medium twg-text-white twg-transition-all twg-duration-300 twg-ease-linear hover:twg-bg-transparent hover:twg-text-dark-100 twg-h-37px"
+      >
+        100% Completed
+      </button>
+    </div>
+    <div class="lg:twg-mt-9 max-lg:twg-mt-5 twg-space-y-3 twg-pb-2">
+      {% for profile in profiles %}
+      <div
+        class="twg-flex twg-items-center twg-justify-between twg-gap-5 twg-py-2 twg-pr-3 twg-pl-1 twg-rounded-10px twg-overflow-hidden twg-border {% if not loop.first %}twg-border-dark-100/0 twg-shadow-[3px_3px_0px_transprant] hover:twg-border-dark-100/30 hover:twg-custom-shadow {% else %} twg-border-dark-100/30 twg-custom-shadow {% endif %} twg-transition-shadow twg-duration-300 twg-ease-linear"
+      >
+        <div class="twg-flex twg-items-center twg-gap-3">
+          <img
+            src="{{ Path }}{{ profile.img }}"
+            class="twg-rounded-full"
+            alt="{{ profile.name }}"
+          />
+          <div class="twg-relative">
+            <h4
+              class="twg-text-12px twg-leading-none twg-font-medium twg-text-dark-100"
+            >
+              {{ profile.name }}
+            </h4>
+            <h4
+              class="twg-text-10px twg-leading-none twg-font-medium twg-text-light-800 twg-mt-3px"
+            >
+              {{ profile.progress }}
+            </h4>
+          </div>
+        </div>
+        <div
+          class="twg-size-16px {% if profile.progress == '85% Complete' %} twg-bg-secondary-100 {% elseif profile.progress == '80% Complete' %} twg-bg-secondary-200 {% else %} twg-bg-primary-100 {% endif %} twg-rounded-full twg-text-white twg-text-10px twg-font-medium twg-grid twg-place-items-center twg-leading-none"
+        >
+          {{ profile.rank }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

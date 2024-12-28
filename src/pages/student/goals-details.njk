@@ -1,0 +1,132 @@
+---
+layout: index.njk
+showHeader: true
+title: Practice
+Path: "../../../assets/images/"
+FilePath: "../../../"
+---
+
+{% set lessons = [ { title: "Complete 10 lessons this week", progress: 70,
+completed: "7/10", isTodayLesson: true, status: "In Progress" }, { title: "Score
+90%+ on the next quiz", progress: 50, completed: "100%", isTodayLesson: false,
+status: "Upcoming" }, { title: "Score 90%+ on the next quiz", progress: 60,
+completed: "100%", isTodayLesson: false, status: "Upcoming" } ] %} {% set goals
+= [ { title: "Spend 3 hours on practice this week" }, { title: "Earn 5 badges by
+the end of the month" } ] %} {% set achievements = [ { title: "Practice every
+day for a week.", description: "Well done! Consistent practice every day this
+week." }, { title: "Milestone 1:", description: "Completed 3 lessons in 2 days."
+}, { title: "Milestone 2:", description: "Achieved consistency on Day 7." } ]
+%}{% set stats = [ { label: "Total time taken:", value: "7 days." }, { label:
+"Total attempts:", value: "10 lessons, 2 retakes." }, { label: "Total rewards:",
+value: "Earned: 2 badges, 50 stars." } ] %}
+
+<section
+  class="twg-flex-1 twg-pt-5 twg-flex twg-h-full max-lg:twg-flex-col max-lg:twg-overflow-y-auto max-lg:twg-px-4 max-lg:twg-space-y-6 max-lg:twg-pb-5 twg-relative twg-main-content-section"
+>
+  {% set activeNavLink = "goals" %} {% include "sidebar.njk" %}
+  <div
+    class="twg-main-wrapper-content lg:twg-flex-1 lg:twg-overflow-y-auto lg:twg-px-5 max-lg:!twg-mt-0"
+  >
+    <h1 class="main-heading">Set & Achieve Your Goals</h1>
+    <div class="lg:twg-space-y-30px max-lg:twg-space-y-20px">
+      <div>
+        <h4
+          class="lg:twg-text-20px max-lg:twg-text-18px twg-text-primary-100 twg-uppercase twg-font-medium twg-mt-6px twg-mb-2"
+        >
+          Define your learning journey and track your success.
+        </h4>
+        <div class="twg-relative">
+          <div class="twg-h-full">
+            <div
+              class="twg-border twg-h-full twg-border-dark-100/30 twg-rounded-10px twg-custom-shadow twg-p-20px twg-flex twg-flex-col lg:twg-gap-5 max-lg:twg-gap-3"
+            >
+              <h3
+                class="lg:twg-text-16px max-lg:twg-text-14px twg-font-medium twg-text-dark-100"
+              >
+                Complete 10 lessons this week
+              </h3>
+              <h3
+                class="lg:twg-text-14px max-lg:twg-text-13px twg-font-medium twg-text-dark-100"
+              >
+                3 lessons remaining to achieve this goal.
+              </h3>
+              <div class="">
+                <div class="twg-flex twg-justify-between twg-gap-3 twg-mb-1">
+                  <p
+                    class="lg:twg-text-14px max-lg:twg-text-13px twg-text-light-300"
+                  >
+                    70% Completed
+                  </p>
+                  <p
+                    class="lg:twg-text-14px max-lg:twg-text-13px twg-text-light-300"
+                  >
+                    7/10
+                  </p>
+                </div>
+                <div
+                  class="twg-relative twg-rounded-full twg-w-full twg-bg-dark-100/10 twg-h-6px twg-overflow-hidden"
+                >
+                  <div
+                    style="width: 70%"
+                    class="twg-absolute twg-h-full twg-rounded-full twg-bg-primary-100"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <h3
+                class="lg:twg-text-16px max-lg:twg-text-14px twg-font-medium twg-text-dark-100"
+              >
+              Upcoming Tasks:
+              </h3>
+              {% set completed_lesson = ["Complete Lesson 8 by Friday","Complete Lesson 9 by Friday","Complete Lesson 10 by Friday"] %}
+              <ul class="twg-mt-1 twg-space-y-1 twg-list-disc twg-pl-15px">
+                {% for lesson in completed_lesson %}
+                <li class="lg:twg-text-14px max-lg:twg-text-13px twg-text-light-300">{{ lesson }}</li>
+                {% endfor %}
+              </ul>
+              </div>
+              <button
+              data-target="confirmation_thank_you"
+                class="twg-modal-open twg-px-14px twg-py-10px twg-leading-none twg-rounded-lg twg-text-14px twg-uppercase twg-transition-opacity twg-duration-300 twg-ease-linear hover:twg-opacity-80 twg-h-37px twg-w-fit twg-bg-primary-100 twg-text-white"
+              >
+                View Goal Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div
+  id="confirmation_thank_you"
+  class="twg-model twg-hidden twg-fixed twg-inset-0 twg-size-full twg-z-[999999] twg-bg-dark-100/50 twg-place-items-center twg-overflow-y-auto twg-py-8 twg-px-5 twg-h-screen"
+>
+  <div
+    class="twg-max-w-553px twg-w-full twg-z-10 twg-rounded-[10px] twg-bg-white twg-p-[20px] twg-flex twg-items-center twg-justify-center twg-flex-col twg-gap-3 twg-relative"
+  >
+    {% include "model-close.njk" %}
+    <div class="twg-relative twg-space-y-3 twg-w-full">
+      <div class="twg-flex twg-flex-col twg-items-center">
+        <dotlottie-player
+          src="https://lottie.host/ebe930ad-d9f6-4a7b-aea7-c0bba13b7989/BgDVJGL9t8.lottie"
+          background="transparent"
+          speed="1"
+          class="twg-size-203px"
+          loop
+          autoplay
+        ></dotlottie-player>
+        <h2
+          class="lg:twg-text-20px max-lg:twg-text-18px twg-font-semibold twg-text-primary-100 twg-text-center"
+        >
+        Set Goal Successful
+        </h2>
+        <p
+          class="lg:twg-text-16px max-lg:twg-text-14px twg-text-light-200 twg-text-center"
+        >
+        Great job on completing your set goal
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

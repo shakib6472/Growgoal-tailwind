@@ -1,0 +1,156 @@
+{% set availableTimes = [ { day: "Monday", startTime: "09:00", endTime: "10:00"
+}, { day: "Monday", startTime: "11:00", endTime: "12:30" }, { day: "Monday",
+startTime: "13:00", endTime: "14:00" } ] %}
+<div class="twg-space-y-4">
+  <div class="twg-relative">
+    <label
+      for="schedule_lesson_select_teacher"
+      class="twg-text-12px twg-text-neutral-700 twg-font-semibold twg-mb-3px twg-block"
+      >Select Teacher *</label
+    >
+    <select
+      name="schedule_lesson_select_teacher"
+      id="schedule_lesson_select_teacher"
+      class="schedule_lesson_select_teacher twg-text-10px twg-font-semibold twg-rounded-10px twg-border !twg-border-light-800 twg-text-dark-100 !twg-ring-0 !twg-outline-none !twg-shadow-none twg-leading-[17px] twg-uppercase twg-h-40px twg-w-full"
+    >
+      <option
+        value="mathematics"
+        class="twg-text-10px twg-text-dark-100"
+        selected
+      >
+        Mathematics
+      </option>
+      <option value="profile1" class="twg-text-10px twg-text-dark-100">
+        Profile 1
+      </option>
+      <option value="profile2" class="twg-text-10px twg-text-dark-100">
+        Profile 2
+      </option>
+      <option value="profile3" class="twg-text-10px twg-text-dark-100">
+        Profile 3
+      </option>
+    </select>
+  </div>
+  <div class="twg-relative">
+    <label
+      for="schedule_lesson_select_date"
+      class="twg-text-12px twg-text-neutral-700 twg-font-semibold twg-mb-3px twg-block"
+      >Select Date *</label
+    >
+    <input
+      id="schedule_lesson_select_date"
+      name="schedule_lesson_select_date"
+      type="date"
+      class="twg-text-10px twg-font-semibold twg-rounded-10px twg-border !twg-border-light-800 twg-text-dark-100 !twg-ring-0 !twg-outline-none !twg-shadow-none twg-leading-[17px] twg-uppercase twg-h-40px twg-w-full"
+    />
+  </div>
+</div>
+<div
+  class="twg-rounded-16px twg-pt-10px twg-pb-16px twg-px-16px twg-border twg-border-accent-300"
+>
+  <h3
+    class="lg:twg-text-24px max-lg:twg-text-22px twg-font-semibold twg-pb-1 twg-border-b !twg-border-b-light-800"
+  >
+    November 01, 2024
+  </h3>
+  <div class="twg-mt-3">
+    <h4
+      class="lg:twg-text-14px max-lg:twg-text-13px twg-font-semibold twg-text-dark-100 twg-mb-4"
+    >
+      Available Time
+    </h4>
+    <div class="twg-space-y-4">
+      {% for time in availableTimes %}
+      <div class="twg-flex twg-flex-col twg-gap-2">
+        <div class="twg-flex twg-items-center twg-gap-4">
+          <div
+            class="twg-toggle twg-relative twg-inline-block twg-w-46px twg-h-6"
+          >
+            <div
+              class="twg-track twg-absolute twg-inset-0 twg-bg-accent-400 twg-rounded-full twg-transition-colors"
+            ></div>
+            <div
+              class="twg-thumb twg-absolute twg-top-3px twg-left-1 twg-size-18px twg-bg-white twg-rounded-full twg-transition-transform"
+            ></div>
+            <input
+              type="checkbox"
+              class="twg-input twg-absolute twg-opacity-0 twg-w-full twg-h-full twg-cursor-pointer"
+              id="{{
+                time.day | lower
+              }}_start_{{ time.startTime | replace(':', '') }}_{{
+                time.day | lower
+              }}_end_{{ time.endTime | replace(':', '') }}"
+              name="{{
+                time.day | lower
+              }}_start_{{ time.startTime | replace(':', '') }}_{{
+                time.day | lower
+              }}_end_{{ time.endTime | replace(':', '') }}"
+            />
+          </div>
+
+          <h3
+            class="twg-toggle-label lg:twg-text-18px max-lg:twg-text-16px twg-font-medium twg-text-dark-100"
+          >
+            {{ time.day }}
+          </h3>
+        </div>
+        <div
+          class="twg-flex lg:twg-items-center twg-justify-between max-lg:twg-flex-col max-lg:twg-gap-3"
+        >
+          <div class="twg-flex max-lg:twg-flex-col twg-gap-3">
+            <input
+              type="time"
+              id="{{
+                time.day | lower
+              }}-{{ time.startTime | replace(':', '') }}"
+              name="{{
+                time.day | lower
+              }}_start_{{ time.startTime | replace(':', '') }}"
+              class="twg-py-13px twg-px-16px twg-bg-light-400 twg-text-14px twg-rounded-lg !twg-border-none !twg-ring-0 !twg-text-dark-100 lg:twg-min-w-140px max-lg:twg-w-full twg-uppercase"
+              value="{{ time.startTime }}"
+            />
+            <input
+              type="time"
+              id="{{ time.day | lower }}-{{ time.endTime | replace(':', '') }}"
+              name="{{
+                time.day | lower
+              }}_end_{{ time.endTime | replace(':', '') }}"
+              class="twg-py-13px twg-px-16px twg-bg-light-400 twg-text-14px twg-rounded-lg !twg-border-none !twg-ring-0 !twg-text-dark-100 lg:twg-min-w-140px max-lg:twg-w-full twg-uppercase"
+              value="{{ time.endTime }}"
+            />
+          </div>
+          <button
+            type="button"
+            class="twg-size-30px twg-rounded-full twg-bg-primary-100 twg-text-white twg-grid twg-place-items-center twg-text-18px max-lg:twg-ml-auto"
+          >
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+      </div>
+      <div class="twg-border-b !twg-border-b-light-800"></div>
+      {% endfor %}
+      <div
+        class="twg-px-16px max-lg:twg-py-3 twg-bg-light-400 twg-text-14px twg-rounded-lg !twg-border-none !twg-ring-0 !twg-text-dark-100 twg-min-h-40px twg-uppercase twg-flex twg-items-center twg-gap-3"
+      >
+        <img src="{{ Path }}time-est-icon.svg" alt="" />
+        <span>All of time is in EST ( United State Time )</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="twg-space-y-2">
+  {% include "additional-notes.njk" %}
+  <!-- <div class="twg-relative">
+    <label
+      for="schedule_lesson_additional_details"
+      class="twg-text-12px twg-text-neutral-700 twg-font-semibold twg-mb-3px twg-block"
+      >Additional Notes</label
+    >
+    <textarea
+      class="twg-text-10px twg-font-semibold twg-rounded-10px twg-border !twg-border-light-800 twg-text-dark-100 !twg-ring-0 !twg-outline-none !twg-shadow-none twg-leading-[17px] twg-w-full twg-resize-none"
+      rows="5"
+      name="schedule_lesson_additional_details"
+      id="schedule_lesson_additional_details"
+    ></textarea>
+  </div> -->
+</div>

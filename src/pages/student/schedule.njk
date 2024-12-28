@@ -1,0 +1,178 @@
+---
+layout: index.njk
+showHeader: true
+title: Lesson | Schedule
+Path: "../../../assets/images/"
+FilePath: "../../../"
+---
+
+{% set activeNavLink = "Lessons" %}
+<section
+  class="twg-flex-1 twg-pt-5 twg-flex twg-h-full max-lg:twg-flex-col max-lg:twg-overflow-y-auto max-lg:twg-px-4 max-lg:twg-space-y-6 max-lg:twg-pb-5 twg-relative twg-main-content-section"
+>
+  {% include "sidebar.njk" %}
+  <div
+    class="lg:twg-flex-1 lg:twg-overflow-y-auto lg:twg-px-5 max-lg:!twg-mt-0 twg-space-y-4"
+  >
+    <div
+      class="twg-flex twg-items-center twg-gap-3 lg:twg-text-16px max-lg:twg-text-16px twg-text-light-500"
+    >
+      <a href="/pages/student/">Lessons</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span class="twg-text-primary-100">Schedule</span>
+    </div>
+    <h1 class="main-heading">Schedule Lesson</h1>
+    <div class="twg-relative lg:twg-space-y-5 max-lg:twg-space-y-3 lg:twg-pb-4">
+      {% include "schedule-lesson-profile.njk" %}
+      <form
+        id="schedule_lesson"
+        class="schedule_lesson lg:twg-space-y-5 max-lg:twg-space-y-3"
+      >
+        {% include "schedule.njk" %}
+        <div class="twg-flex twg-items-center twg-justify-end !twg-mt-2">
+          <button
+            data-target="schedule_modal"
+            class="twg-modal-open twg-main-btn"
+          >
+            Schedule Lesson
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<div
+  id="schedule_modal"
+  class="twg-model twg-hidden twg-fixed twg-inset-0 twg-size-full twg-z-[999999] twg-bg-dark-100/50 twg-place-items-center twg-overflow-y-auto twg-py-8 twg-px-5 twg-h-screen"
+>
+  <div
+    class="twg-max-w-533px twg-w-full twg-z-10 twg-rounded-[10px] twg-bg-white twg-p-[30px] twg-flex twg-items-center twg-justify-center twg-flex-col twg-gap-5 twg-relative"
+  >
+    <h3 class="twg-text-16px twg-font-semibold twg-text-dark-100 twg-w-full">
+      Your lesson has been successfully scheduled!
+    </h3>
+    {% include "model-close.njk" %}
+    <div class="twg-relative twg-space-y-5 twg-w-full">
+      {% include "schedule-lesson-profile-mobile.njk" %}
+      <div class="twg-space-y-5">
+        {% include "additional-notes.njk" %}
+        <div class="twg-flex twg-items-center twg-justify-end">
+          <button
+            data-target="twg_invite_modal"
+            class="twg-modal-open twg-px-14px twg-py-10px twg-leading-none twg-bg-primary-100 twg-rounded-full twg-text-14px twg-font-medium twg-text-white twg-transition-opacity twg-duration-300 twg-ease-linear hover:twg-opacity-80 twg-h-37px twg-w-full twg-text-center"
+          >
+            Go Back
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  id="twg_invite_modal"
+  class="twg-model twg-hidden twg-fixed twg-inset-0 twg-size-full twg-z-[999999] twg-bg-dark-100/50 twg-place-items-center twg-overflow-y-auto twg-py-8 twg-px-5 twg-h-screen"
+>
+  <div
+    class="twg-max-w-533px twg-w-full twg-z-10 twg-rounded-[10px] twg-bg-white twg-p-[30px] twg-flex twg-items-center twg-justify-center twg-flex-col twg-gap-5 twg-relative"
+  >
+    <h3 class="twg-text-16px twg-font-semibold twg-text-primary-100 twg-w-full">
+      Want to Invite a Friend to This Lesson?
+    </h3>
+    {% include "model-close.njk" %}
+    <div class="twg-relative twg-space-y-5 twg-w-full">
+      <div class="twg-relative">
+        <ul class="twg-list-disc twg-pl-17px">
+          <li class="twg-text-14px twg-text-light-300">
+            Your friend can join this lesson for free, courtesy of us!
+          </li>
+          <li class="twg-text-14px twg-text-light-300">
+            You can invite only one friend to this lesson.
+          </li>
+        </ul>
+      </div>
+      <div class="twg-space-y-5">
+        <div class="twg-relative">
+          <label
+            for="schedule_lesson_additional_details"
+            class="twg-text-12px twg-text-neutral-700 twg-font-semibold twg-mb-3px twg-block"
+            >Additional Notes</label
+          >
+          <div class="twg-relative">
+            <input
+              type="text"
+              class="twg-text-13px twg-font-semibold twg-rounded-4px twg-border !twg-border-accent-500 twg-text-primary-100 !twg-ring-0 !twg-outline-none !twg-shadow-none twg-leading-[17px] twg-w-full twg-resize-none twg-h-38px twg-pr-10"
+              value="https://lessonplatform.com/invite/12345"
+              name="schedule_lesson_additional_details"
+              id="schedule_lesson_additional_details"
+            />
+            <button
+              class="twg-absolute twg-right-4 twg-top-50/100 -twg-translate-y-1/2"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.25 12.75C7.25 10.1573 7.25 8.86091 8.05546 8.05546C8.86091 7.25 10.1573 7.25 12.75 7.25L13.6667 7.25C16.2594 7.25 17.5558 7.25 18.3612 8.05546C19.1667 8.86091 19.1667 10.1573 19.1667 12.75V13.6667C19.1667 16.2594 19.1667 17.5557 18.3612 18.3612C17.5558 19.1667 16.2594 19.1667 13.6667 19.1667H12.75C10.1573 19.1667 8.86091 19.1667 8.05546 18.3612C7.25 17.5557 7.25 16.2594 7.25 13.6667L7.25 12.75Z"
+                  stroke="#404040"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14.5831 7.25016C14.581 4.5395 14.5399 3.13544 13.751 2.17405C13.5986 1.9884 13.4284 1.81816 13.2427 1.66579C12.2285 0.833496 10.7218 0.833496 7.70825 0.833496C4.69473 0.833496 3.18796 0.833496 2.17381 1.66579C1.98815 1.81816 1.81791 1.9884 1.66555 2.17405C0.833252 3.18821 0.833252 4.69497 0.833252 7.7085C0.833252 10.722 0.833252 12.2288 1.66555 13.2429C1.81791 13.4286 1.98815 13.5988 2.17381 13.7512C3.13519 14.5402 4.53925 14.5812 7.24992 14.5834"
+                  stroke="#404040"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="twg-flex twg-items-center twg-justify-end">
+          <button
+            data-target="invite_success"
+            class="twg-modal-open twg-px-14px twg-py-10px twg-leading-none twg-bg-success-100 twg-rounded-full twg-text-14px twg-font-medium twg-text-white twg-transition-opacity twg-duration-300 twg-ease-linear hover:twg-opacity-80 twg-h-37px twg-w-full twg-text-center twg-flex twg-items-center twg-justify-center twg-gap-2"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>Invite Friend</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  id="invite_success"
+  class="twg-model twg-hidden twg-fixed twg-inset-0 twg-size-full twg-z-[999999] twg-bg-dark-100/50 twg-place-items-center twg-overflow-y-auto twg-py-8 twg-px-5 twg-h-screen"
+>
+  <div
+    class="twg-max-w-533px twg-w-full twg-z-10 twg-rounded-[10px] twg-bg-white twg-p-[30px] twg-flex twg-items-center twg-justify-center twg-flex-col twg-gap-3 twg-relative"
+  >
+    <img
+      src="{{ Path }}invite_success_wrapper.png"
+      alt="Forgot Password Image"
+      class="twg-size-60px -twg-mb-4"
+    />
+    {% include "model-close.njk" %}
+    <div class="twg-relative twg-space-y-3 twg-w-full">
+      <div class="twg-flex twg-flex-col twg-items-center twg-space-y-[10px]">
+        <h2
+          class="lg:twg-text-20px max-lg:twg-text-18px twg-font-semibold twg-text-primary-100"
+        >
+          Invited Successfully
+        </h2>
+        <p
+          class="lg:twg-text-16px max-lg:twg-text-14px twg-text-light-200 twg-text-center"
+        >
+          Your friend has been successfully invited. <br />
+          We’ll notify you when they register!
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

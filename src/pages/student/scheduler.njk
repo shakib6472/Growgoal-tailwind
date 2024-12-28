@@ -1,0 +1,26 @@
+---
+layout: index.njk
+showHeader: true
+title: Scheduler
+Path: "../../../assets/images/"
+FilePath: "../../../"
+---
+
+{% set progressData = [ { value: "18/30", description: "Total Lessons
+Completed", image: "progress-icon-1.png" }, { value: "12", description:
+"Practice Sessions Completed", image: "progress-icon-2.png" }, { value: "78%",
+description: "Average Score", image: "progress-icon-3.png" }, { value: "12h
+45m", description: "Time Spent", image: "progress-icon-4.png" } ] %}
+
+<section
+  class="twg-flex-1 twg-pt-5 twg-flex twg-h-full max-lg:twg-flex-col max-lg:twg-overflow-y-auto max-lg:twg-px-4 max-lg:twg-space-y-6 max-lg:twg-pb-5 twg-relative twg-main-content-section"
+>
+  {% set activeNavLink = "scheduler" %} {% include "sidebar.njk" %}
+  <div
+    class="twg-main-wrapper-content lg:twg-flex-1 lg:twg-overflow-y-auto lg:twg-px-5 max-lg:!twg-mt-0"
+  >
+    <div class="twg-custom-calendar twg-pb-5 twg-rounded-lg twg-border twg-border-[#ddd]">
+      <div id="calendar"></div>
+    </div>
+  </div>
+</section>

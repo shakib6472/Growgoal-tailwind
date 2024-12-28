@@ -1,0 +1,185 @@
+---
+layout: index.njk
+showHeader: true
+title: Practice
+Path: "../../../assets/images/"
+FilePath: "../../../"
+---
+
+{% set lessons = [ { title: "Complete 10 lessons this week", progress: 70,
+completed: "7/10", isTodayLesson: true, status: "In Progress" }, { title: "Score
+90%+ on the next quiz", progress: 50, completed: "100%", isTodayLesson: false,
+status: "Upcoming" }, { title: "Score 90%+ on the next quiz", progress: 60,
+completed: "100%", isTodayLesson: false, status: "Upcoming" } ] %} {% set goals
+= [ { title: "Spend 3 hours on practice this week" }, { title: "Earn 5 badges by
+the end of the month" } ] %} {% set achievements = [ { title: "Practice every
+day for a week.", description: "Well done! Consistent practice every day this
+week." }, { title: "Milestone 1:", description: "Completed 3 lessons in 2 days."
+}, { title: "Milestone 2:", description: "Achieved consistency on Day 7." } ]
+%}{% set stats = [ { label: "Total time taken:", value: "7 days." }, { label:
+"Total attempts:", value: "10 lessons, 2 retakes." }, { label: "Total rewards:",
+value: "Earned: 2 badges, 50 stars." } ] %}
+
+<section
+  class="twg-flex-1 twg-pt-5 twg-flex twg-h-full max-lg:twg-flex-col max-lg:twg-overflow-y-auto max-lg:twg-px-4 max-lg:twg-space-y-6 max-lg:twg-pb-5 twg-relative twg-main-content-section"
+>
+  {% set activeNavLink = "goals" %} {% include "sidebar.njk" %}
+  <div
+    class="twg-main-wrapper-content lg:twg-flex-1 lg:twg-overflow-y-auto lg:twg-px-5 max-lg:!twg-mt-0"
+  >
+    <h1 class="main-heading">Set & Achieve Your Goals</h1>
+    <div class="lg:twg-space-y-30px max-lg:twg-space-y-20px">
+      <div>
+        <h4
+          class="lg:twg-text-20px max-lg:twg-text-18px twg-text-primary-100 twg-uppercase twg-font-medium twg-mt-6px twg-mb-2"
+        >
+          Define your learning journey and track your success.
+        </h4>
+        <div
+          class="twg-grid mm-md-2xl:twg-grid-cols-3 2xl:twg-grid-cols-4 lg:twg-gap-5 max-lg:twg-gap-4"
+        >
+          {% for lesson in lessons %}
+          <a href="/pages/student/goals-details/" class="twg-h-full">
+            <div
+              class="twg-border twg-h-full twg-border-dark-100/30 twg-rounded-10px twg-custom-shadow twg-p-16px twg-flex twg-flex-col"
+            >
+              <h3
+                class="lg:twg-text-16px max-lg:twg-text-14px twg-font-medium twg-text-dark-100"
+              >
+                {{ lesson.title }}
+              </h3>
+              <div class="twg-mt-3">
+                <div
+                  class="twg-relative twg-rounded-full twg-w-full twg-bg-dark-100/10 twg-h-6px twg-overflow-hidden"
+                >
+                  <div
+                    style="width: {{ lesson.progress }}%"
+                    class="twg-absolute twg-h-full twg-rounded-full twg-bg-primary-100"
+                  ></div>
+                </div>
+                <div class="twg-flex twg-justify-between twg-gap-3 twg-mt-1">
+                  <p
+                    class="lg:twg-text-14px max-lg:twg-text-13px twg-text-light-300"
+                  >
+                    {{ lesson.progress }}% Completed
+                  </p>
+                  <p
+                    class="lg:twg-text-14px max-lg:twg-text-13px twg-text-light-300"
+                  >
+                    {{ lesson.completed }}
+                  </p>
+                </div>
+              </div>
+              <button
+                class="twg-mt-5 twg-px-14px twg-py-10px twg-leading-none twg-rounded-lg twg-text-14px twg-uppercase twg-transition-opacity twg-duration-300 twg-ease-linear hover:twg-opacity-80 twg-h-37px twg-w-full {% if lesson.isTodayLesson %} twg-bg-primary-100 twg-text-white {% else %} twg-border twg-border-dark-100 twg-text-dark-100 {% endif %}"
+              >
+                View Goal Details
+              </button>
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      <div>
+        <h4
+          class="lg:twg-text-20px max-lg:twg-text-18px twg-text-primary-100 twg-uppercase twg-font-medium twg-mt-6px twg-mb-2"
+        >
+          Suggested Goals
+        </h4>
+        <div
+          class="twg-grid mm-md-2xl:twg-grid-cols-3 2xl:twg-grid-cols-4 lg:twg-gap-5 max-lg:twg-gap-4"
+        >
+          {% for goal in goals %}
+          <a href="/pages/student/goals-details/" class="twg-h-full">
+            <div
+              class="twg-border twg-h-full twg-border-dark-100/30 twg-rounded-10px twg-custom-shadow twg-p-16px twg-flex twg-flex-col"
+            >
+              <img
+                src="{{ Path }}goals-icon.png"
+                class="twg-size-26px twg-mb-3"
+                alt=""
+              />
+              <h3
+                class="lg:twg-text-16px max-lg:twg-text-14px twg-font-medium twg-text-dark-100"
+              >
+                {{ goal.title }}
+              </h3>
+              <button
+                class="twg-mt-5 twg-px-14px twg-py-10px twg-leading-none twg-rounded-lg twg-text-14px twg-uppercase twg-transition-opacity twg-duration-300 twg-ease-linear hover:twg-opacity-80 twg-h-37px twg-w-full twg-font-semibold twg-bg-secondary-100 twg-text-dark-100"
+              >
+                View Goal Details
+              </button>
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      <div>
+        <h4
+          class="lg:twg-text-20px max-lg:twg-text-18px twg-text-primary-100 twg-uppercase twg-font-medium twg-mt-6px twg-mb-2"
+        >
+          Completed Goals
+        </h4>
+        <div
+          class="twg-border twg-border-dark-100/30 twg-rounded-10px twg-custom-shadow twg-p-20px twg-flex twg-gap-5 lg:twg-justify-between max-lg:twg-flex-col"
+        >
+          <div
+            class="lg:twg-max-w-528px twg-w-full lg:twg-space-y-3 max-lg:twg-space-y-2"
+          >
+            <div class="twg-flex twg-items-center twg-justify-between">
+              <img
+                src="{{ Path }}3d-gold-trophy.jpg"
+                class="twg-size-30px"
+                alt=""
+              />
+              <span
+                class="twg-h-22px twg-py-1 twg-px-2 twg-rounded-full twg-bg-secondary-100 twg-text-dark-100 twg-text-12px twg-uppercase twg-flex twg-items-center twg-justify-center"
+                >Achieved</span
+              >
+            </div>
+            {% for achievement in achievements %}
+            <div>
+              <h3
+                class="lg:twg-text-16px max-lg:twg-text-14px twg-font-medium twg-text-dark-100"
+              >
+                {{ achievement.title }}
+              </h3>
+              {% if achievement.description %}
+              <p
+                class="lg:twg-text-14px max-lg:twg-text-13px twg-text-light-300"
+              >
+                {{ achievement.description }}
+              </p>
+              {% endif %}
+            </div>
+            {% endfor %} {% for stat in stats %}
+            <div
+              class="twg-flex twg-items-center twg-justify-between twg-gap-4"
+            >
+              <p
+                class="lg:twg-text-14px max-lg:twg-text-13px twg-text-light-300"
+              >
+                {{ stat.label }}
+              </p>
+              <p
+                class="lg:twg-text-14px max-lg:twg-text-13px twg-font-bold twg-text-dark-100"
+              >
+                {{ stat.value }}
+              </p>
+            </div>
+            {% endfor %}
+          </div>
+          <div
+            class="twg-w-fit max-lg:twg-mx-auto twg-overflow-hidden twg-relative"
+          >
+            <!-- <canvas id="radialChart"></canvas> -->
+            <div class="chart-container">
+              <canvas id="outerChart"></canvas>
+              <canvas id="innerChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

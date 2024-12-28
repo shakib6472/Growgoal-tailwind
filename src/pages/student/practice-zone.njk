@@ -1,0 +1,147 @@
+---
+layout: index.njk
+showHeader: true
+title: Practice
+Path: "../../../assets/images/"
+FilePath: "../../../"
+---
+
+{% set lessons = [ { title: "Practice Material", status: "Completed",
+description: "Complete the Practice for Lesson 1." }, { isTodayLesson: true,
+title: "Practice Material", status: "Today’s Practice", description: "Complete
+the Practice for Lesson 2.", cta: "Enter Practice" }, { title: "Practice
+Material", status: "Upcoming", description: "Complete the Practice for Lesson
+3.", locked: true }, { title: "Practice Material", status: "Upcoming",
+description: "Complete the Practice for Lesson 4.", locked: true }, { title:
+"Practice Material", status: "Upcoming", description: "Complete the Practice for
+Lesson 5.", locked: true }, { title: "Practice Material", status: "Upcoming",
+description: "Complete the Practice for Lesson 6.", locked: true }, { title:
+"Practice Material", status: "Upcoming", description: "Complete the Practice for
+Lesson 7.", locked: true }, { title: "Practice Material", status: "Upcoming",
+description: "Complete the Practice for Lesson 8.", locked: true }, { title:
+"Practice Material", status: "Upcoming", description: "Complete the Practice for
+Lesson 9.", locked: true }, { title: "Practice Material", status: "Upcoming",
+description: "Complete the Practice for Lesson 10.", locked: true }, { title:
+"Practice Material", status: "Upcoming", description: "Complete the Practice for
+Lesson 11.", locked: true }, { title: "Practice Material", status: "Upcoming",
+description: "Complete the Practice for Lesson 12.", locked: true } ] %} {% set
+profiles = [ { name: "Michael Kopfler", rank: 1, progress: "85% Complete", img:
+"leaderboard-profiles-img-1.jpg" }, { name: "Michael Kopfler", rank: 2,
+progress: "80% Complete", img: "leaderboard-profiles-img-2.jpg" }, { name:
+"Michael Kopfler", rank: 1, progress: "75% Complete", img:
+"leaderboard-profiles-img-3.jpg" }, { name: "Michael Kopfler", rank: 1,
+progress: "75% Complete", img: "leaderboard-profiles-img-4.jpg" }, { name:
+"Michael Kopfler", rank: 1, progress: "75% Complete", img:
+"leaderboard-profiles-img-5.jpg" }, { name: "Michael Kopfler", rank: 1,
+progress: "75% Complete", img: "leaderboard-profiles-img-6.jpg" }, { name:
+"Michael Kopfler", rank: 1, progress: "75% Complete", img:
+"leaderboard-profiles-img-1.jpg" }, { name: "Michael Kopfler", rank: 1,
+progress: "75% Complete", img: "leaderboard-profiles-img-2.jpg" }, { name:
+"Michael Kopfler", rank: 1, progress: "75% Complete", img:
+"leaderboard-profiles-img-3.jpg" }, { name: "Michael Kopfler", rank: 1,
+progress: "75% Complete", img: "leaderboard-profiles-img-4.jpg" }, { name:
+"Michael Kopfler", rank: 1, progress: "75% Complete", img:
+"leaderboard-profiles-img-5.jpg" }, { name: "Michael Kopfler", rank: 1,
+progress: "75% Complete", img: "leaderboard-profiles-img-6.jpg" } ] %} {% set
+cards = [ { "count": 12, "label": "Total", "bgClass": "twg-bg-primary-100",
+"imgSrc": "lesson-total-banner.svg", "isRelative": false, "extraImg": null,
+"textColor": "twg-text-white" }, { "count": 2, "label": "Completed", "bgClass":
+"twg-bg-success-200", "imgSrc": "completed-img-wrapper.svg", "isRelative": true,
+"extraImg": { "src": "bella-1-wrapper.svg", "class": "twg-absolute -twg-top-17px
+twg-right-2" }, "textColor": "twg-text-white" }, { "count": 10, "label":
+"Upcoming", "bgClass": "twg-border-light-600 twg-border twg-border-dashed",
+"imgSrc": null, "isRelative": false, "extraImg": null, "textColor":
+"twg-text-light-700" } ] %}
+
+<section
+  class="twg-flex-1 twg-pt-5 twg-flex twg-h-full max-lg:twg-flex-col max-lg:twg-overflow-y-auto max-lg:twg-px-4 max-lg:twg-space-y-6 max-lg:twg-pb-5 twg-relative twg-main-content-section"
+>
+  {% set activeNavLink = "Practice Zone" %} {% include "sidebar.njk" %}
+  <div
+    class="twg-main-wrapper-content lg:twg-flex-1 lg:twg-overflow-y-auto lg:twg-px-5 max-lg:!twg-mt-0"
+  >
+    <h1 class="main-heading">Practice</h1>
+    <p
+      class="lg:twg-text-16px max-lg:twg-text-14px twg-text-dark-100 twg-mt-1 twg-mb-2"
+    >
+      Practice makes perfect! Take this time to apply what you’ve learned.
+    </p>
+    <p
+      class="lg:twg-text-16px max-lg:twg-text-14px twg-text-light-500 twg-mt-5 twg-mb-2"
+    >
+      Practice Area
+    </p>
+    <div
+      class="twg-grid mm-md-2xl:twg-grid-cols-3 2xl:twg-grid-cols-4 lg:twg-gap-5 max-lg:twg-gap-4 twg-rounded-10px lg:twg-p-20px max-lg:twg-p-14px lg:twg-mb-3 twg-border twg-border-dark-100/70"
+    >
+      {% for lesson in lessons %}
+      <a href="/pages/student/practice-details/" class="twg-h-full">
+        <div
+          class="twg-border twg-h-full twg-border-dark-100/30 twg-rounded-10px twg-custom-shadow twg-p-16px {% if lesson.isTodayLesson %}twg-bg-secondary-400{% endif %} twg-flex twg-flex-col twg-justify-center twg-min-h-168px"
+        >
+          <div class="twg-flex twg-items-start twg-justify-between twg-gap-4">
+            <div class="twg-relative">
+              <h3
+                class="lg:twg-text-16px max-lg:twg-text-14px twg-font-medium {% if lesson.isTodayLesson %}twg-text-primary-100{% elseif lesson.status == 'Upcoming' %}twg-text-light-500{% else %}twg-text-dark-100{% endif %}"
+              >
+                {{ lesson.title }}
+              </h3>
+            </div>
+            <div
+              class="twg-rounded-4px twg-overflow-hidden twg-border twg-h-21px twg-grid twg-place-items-center twg-uppercase twg-text-10px twg-font-medium twg-px-2 {% if lesson.isTodayLesson %} twg-bg-secondary-500 twg-text-primary-100 twg-border-primary-100 {% elseif lesson.status == 'Upcoming' %} twg-bg-accent-200 twg-text-light-500 twg-border-light-500 {% else %} twg-bg-success-300 twg-text-success-200 twg-border-success-200 {% endif %}"
+            >
+              {{ lesson.status }}
+            </div>
+          </div>
+          <p
+            class="lg:twg-text-14px max-lg:twg-text-13px twg-text-dark-100 twg-mt-2 twg-mb-2"
+          >
+            {{ lesson.description }}
+          </p>
+
+          {% if lesson.cta %}
+          <button
+            class="twg-mt-5 twg-px-14px twg-py-10px twg-leading-none twg-rounded-lg twg-text-14px twg-font-medium twg-uppercase twg-transition-opacity twg-duration-300 twg-ease-linear hover:twg-opacity-80 twg-h-37px twg-w-full {% if lesson.isTodayLesson %} twg-bg-primary-100 twg-text-white {% else %} twg-bg-secondary-100 twg-text-dark-100 {% endif %}"
+          >
+            {{ lesson.cta }}
+          </button>
+          {% endif %} {% if lesson.locked %}
+          <button
+            class="twg-mt-auto twg-ml-auto twg-flex twg-gap-3 twg-text-dark-100"
+          >
+            <span class="twg-text-14px twg-font-medium">Locked</span>
+            <svg
+              width="18"
+              height="22"
+              viewBox="0 0 18 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.26781 17.8447C1.49269 19.515 2.87613 20.8235 4.55966 20.9009C5.97627 20.966 7.4153 21 9 21C10.5847 21 12.0237 20.966 13.4403 20.9009C15.1239 20.8235 16.5073 19.515 16.7322 17.8447C16.879 16.7547 17 15.6376 17 14.5C17 13.3624 16.879 12.2453 16.7322 11.1553C16.5073 9.48502 15.1239 8.17649 13.4403 8.09909C12.0237 8.03397 10.5847 8 9 8C7.4153 8 5.97627 8.03397 4.55966 8.09909C2.87613 8.17649 1.49269 9.48502 1.26781 11.1553C1.12104 12.2453 0.999998 13.3624 0.999998 14.5C0.999998 15.6376 1.12104 16.7547 1.26781 17.8447Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path
+                d="M4.5 8V5.5C4.5 3.01472 6.51472 1 9 1C11.4853 1 13.5 3.01472 13.5 5.5V8"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8.99609 14.5H9.00508"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          {% endif %}
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

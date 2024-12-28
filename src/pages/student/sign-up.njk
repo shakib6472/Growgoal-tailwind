@@ -1,0 +1,143 @@
+---
+layout: index.njk
+title: Grow Goal | Sign Up
+showHeader: false
+FilePath: "../../../"
+Path: "../../../assets/images/"
+isAuthPage: true
+---
+
+{% set formFields = [ { label: 'First Name', name: 'firstName', type: 'text',
+placeholder: 'Enter your first name' }, { label: 'Last Name', name: 'lastName',
+type: 'text', placeholder: 'Enter your last name' }, { label: 'Email', name:
+'email', type: 'email', placeholder: 'Enter your email address.' }, { label:
+'Date of Birth', name: 'dob', type: 'date', placeholder: 'Enter date of birth'
+}, { label: 'Password', name: 'password', type: 'password', placeholder: 'Enter
+your password.', hasEyeButton: true }, { label: 'Confirm Password', name:
+'confirmPassword', type: 'password', placeholder: 'Confirm your password.',
+hasEyeButton: true } ] %}
+
+<section
+  class="lg:twg-pl-20 max-lg:twg-px-5 lg:twg-py-20 max-lg:twg-py-6 twg-max-w-[1440px] twg-mx-auto twg-w-full twg-h-screen twg-relative twg-overflow-y-auto"
+>
+  <img
+    src="{{ Path }}concept-back-school-img.png"
+    alt=""
+    class="twg-absolute twg-left-560px twg-top-5 max-lg:twg-hidden"
+  />
+  <div
+    class="lg:twg-max-w-560px max-lg:twg-max-w-544px twg-w-full twg-flex twg-flex-col max-lg:twg-mx-auto"
+  >
+    <div
+      class="twg-flex twg-items-center max-lg:twg-mx-auto twg-justify-between twg-gap-5 twg-w-full"
+    >
+      <img
+        src="{{ Path }}growgoal-dark-logo.png"
+        class="lg:twg-w-257px max-lg:twg-w-150px"
+        alt=""
+      />
+    </div>
+    <div
+      class="twg-mt-8 twg-max-w-544px twg-w-full lg:twg-space-y-10 max-lg:twg-space-y-6"
+    >
+      <div>
+        <h1
+          class="twg-text-primary-100 twg-font-bold lg:twg-text-32px max-lg:twg-text-26px"
+        >
+          Create Your Account
+        </h1>
+        <p class="lg:twg-text-16px max-lg:twg-text-14px twg-text-light-200">
+          Join us to unlock your potential!
+        </p>
+      </div>
+
+      <form class="twg-space-y-5 sign-up-form" id="sign-up-form">
+        {% for field in formFields %} {% if loop.index == 1 %}
+        <div class="twg-grid lg:twg-grid-cols-2 twg-gap-5">
+          {% endif %}
+          <div class="twg-relative twg-gap-y-1 twg-flex twg-flex-col">
+            <label
+              class="twg-text-14px twg-font-semibold twg-text-light-300"
+              for="{{ field.name }}"
+            >
+              {{ field.label }}
+            </label>
+            <div class="twg-relative twg-text-light-300">
+              <input
+                type="{{ field.type }}"
+                name="{{ field.name }}"
+                id="{{ field.name }}"
+                class="twg-py-10px twg-px-4 twg-border twg-border-light-100 twg-text-14px twg-bg-transparent twg-rounded-lg !twg-shadow-none !twg-ring-0 twg-w-full"
+                placeholder="{{ field.placeholder }}"
+              />
+              {% if field.hasEyeButton %}
+              <button
+                type="button"
+                class="password-viewer-button twg-absolute twg-top-1/2 -twg-translate-y-1/2 twg-right-5"
+                data-target="{{ field.name }}"
+              >
+                <i class="fa-solid fa-eye"></i>
+              </button>
+              {% endif %}
+            </div>
+          </div>
+          {% if loop.index == 2 %}
+        </div>
+        {% endif %} {% endfor %}
+        <div class="twg-relative">
+          <button
+            type="submit"
+            class="twg-w-full twg-px-28px twg-py-14px twg-bg-primary-100 twg-rounded-lg twg-text-16px twg-font-semibold twg-text-white twg-transition-opacity twg-duration-300 twg-ease-linear hover:twg-opacity-80 sign-up-form-submit"
+          >
+            Sign Up
+          </button>
+        </div>
+      </form>
+      <div class="twg-flex twg-items-center twg-justify-center twg-relative">
+        <div class="twg-px-4 twg-bg-white twg-relative twg-z-1">
+          <p class="twg-text-dark-100 twg-text-15px">or</p>
+        </div>
+        <div
+          class="twg-absolute twg-left-0 twg-top-50/100 -twg-translate-y-1/2 twg-bg-light-100 twg-h-1px twg-w-full"
+        ></div>
+      </div>
+      <div class="lg:twg-space-y-5 max-lg:twg-space-y-4">
+        <button
+          type="submit"
+          class="twg-w-full twg-px-28px twg-py-14px twg-border twg-border-light-100 twg-rounded-lg twg-text-16px twg-font-semibold twg-text-dark-100 twg-flex twg-items-center twg-justify-center twg-gap-2"
+        >
+          <img src="{{ Path }}google-icon.svg" class="twg-relative" alt="" />
+          <span>Continue with Google</span>
+        </button>
+        <button
+          type="submit"
+          class="twg-w-full twg-px-28px twg-py-14px twg-border twg-border-light-100 twg-rounded-lg twg-text-16px twg-font-semibold twg-text-dark-100 twg-flex twg-items-center twg-justify-center twg-gap-2"
+        >
+          <img src="{{ Path }}facebook-icon.svg" class="twg-relative" alt="" />
+          <span>Continue with Facebook</span>
+        </button>
+      </div>
+      <div class="twg-flex twg-items-center twg-justify-center">
+        <button
+          type="submit"
+          class="twg-text-16px twg-text-dark-100 twg-flex twg-items-center twg-justify-center twg-gap-2"
+        >
+          <span>Don’t have an account?</span>
+          <a
+            href="/pages/student/sign-in/"
+            class="twg-font-semibold twg-text-primary-100"
+            >Sign In</a
+          >
+        </button>
+      </div>
+    </div>
+  </div>
+  <dotlottie-player
+    src="https://lottie.host/13f8bf1e-756b-4d17-a934-c973270fb9a6/FPKglFcAvC.lottie"
+    background="transparent"
+    speed="1"
+    class="max-lg:twg-hidden twg-fixed twg-top-1/2 -twg-translate-y-1/2 twg-right-0 xl:twg-max-w-[746px] twg-h-393px mm-lg-xl:twg-max-w-[40%] twg-pointer-events-none"
+    loop
+    autoplay
+  ></dotlottie-player>
+</section>

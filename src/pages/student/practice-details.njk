@@ -1,0 +1,355 @@
+---
+layout: index.njk
+showHeader: true
+title: Practice | Details
+Path: "../../../assets/images/"
+FilePath: "../../../"
+---
+
+{% set lessons = [ { active: true, title: "Practice Material - Part 1",
+description: "Key concepts for Lesson 1" }, { title: "Practice Material - Part
+2", description: "Key concepts for Lesson 1" }, { title: "Practice Material -
+Part 2", description: "Key concepts for Lesson 1" }, { title: "Practice Material
+- Part 2", description: "Key concepts for Lesson 1" }] %} {% set profiles = [ {
+name: "Michael Kopfler", rank: 1, progress: "85% Complete", img:
+"leaderboard-profiles-img-1.jpg" }, { name: "Michael Kopfler", rank: 2,
+progress: "80% Complete", img: "leaderboard-profiles-img-2.jpg" }, { name:
+"Michael Kopfler", rank: 1, progress: "75% Complete", img:
+"leaderboard-profiles-img-3.jpg" }, { name: "Michael Kopfler", rank: 1,
+progress: "75% Complete", img: "leaderboard-profiles-img-4.jpg" }, { name:
+"Michael Kopfler", rank: 1, progress: "75% Complete", img:
+"leaderboard-profiles-img-5.jpg" }, { name: "Michael Kopfler", rank: 1,
+progress: "75% Complete", img: "leaderboard-profiles-img-6.jpg" }, { name:
+"Michael Kopfler", rank: 1, progress: "75% Complete", img:
+"leaderboard-profiles-img-1.jpg" }, { name: "Michael Kopfler", rank: 1,
+progress: "75% Complete", img: "leaderboard-profiles-img-2.jpg" }, { name:
+"Michael Kopfler", rank: 1, progress: "75% Complete", img:
+"leaderboard-profiles-img-3.jpg" }, { name: "Michael Kopfler", rank: 1,
+progress: "75% Complete", img: "leaderboard-profiles-img-4.jpg" }, { name:
+"Michael Kopfler", rank: 1, progress: "75% Complete", img:
+"leaderboard-profiles-img-5.jpg" }, { name: "Michael Kopfler", rank: 1,
+progress: "75% Complete", img: "leaderboard-profiles-img-6.jpg" } ] %} {% set
+cards = [ { "count": 12, "label": "Total", "bgClass": "twg-bg-primary-100",
+"imgSrc": "lesson-total-banner.svg", "isRelative": false, "extraImg": null,
+"textColor": "twg-text-white" }, { "count": 2, "label": "Completed", "bgClass":
+"twg-bg-success-200", "imgSrc": "completed-img-wrapper.svg", "isRelative": true,
+"extraImg": { "src": "bella-1-wrapper.svg", "class": "twg-absolute -twg-top-17px
+twg-right-2" }, "textColor": "twg-text-white" }, { "count": 10, "label":
+"Upcoming", "bgClass": "twg-border-light-600 twg-border twg-border-dashed",
+"imgSrc": null, "isRelative": false, "extraImg": null, "textColor":
+"twg-text-light-700" } ] %}
+
+<section
+  class="twg-flex-1 twg-pt-5 twg-flex twg-h-full max-lg:twg-flex-col max-lg:twg-overflow-y-auto max-lg:twg-px-4 max-lg:twg-space-y-6 max-lg:twg-pb-5 twg-relative twg-main-content-section"
+>
+  {% set activeNavLink = "Practice Zone" %} {% include "sidebar.njk" %}
+  <div
+    class="twg-main-wrapper-content lg:twg-flex-1 lg:twg-overflow-y-auto lg:twg-px-5 max-lg:!twg-mt-0"
+  >
+    <h1 class="main-heading">Practice</h1>
+    <p
+      class="lg:twg-text-16px max-lg:twg-text-14px twg-text-dark-100 twg-mt-1 twg-mb-2"
+    >
+      Practice makes perfect! Take this time to apply what you’ve learned.
+    </p>
+    <p
+      class="lg:twg-text-16px max-lg:twg-text-14px twg-text-light-500 twg-mt-5 twg-mb-2"
+    >
+      Practice Area
+    </p>
+    <div
+      class="twg-rounded-10px lg:twg-px-20px max-lg:twg-px-14px lg:twg-py-10 max-lg:twg-py-5 twg-mb-3 twg-border twg-border-dark-100/70 lg:twg-h-full"
+    >
+      <div
+        class="twg-grid mm-md-2xl:twg-grid-cols-4 2xl:twg-grid-cols-5 lg:twg-gap-5 max-lg:twg-gap-4"
+      >
+        {% for lesson in lessons %}
+        <a href="/pages/student/practice-details/" class="twg-h-full">
+          <div
+            class="twg-border twg-h-full twg-rounded-12px twg-p-16px {% if lesson.active %} twg-bg-secondary-600 twg-border-primary-100 {% else %} twg-border-accent-600 {% endif %} twg-flex twg-flex-col"
+          >
+            <div class="twg-relative twg-flex twg-gap-2 twg-w-full">
+              <div
+                class="twg-border-accent-600 twg-rounded-10px twg-grid twg-place-items-center twg-text-dark-100 twg-size-44px{% if lesson.active %} twg-bg-secondary-700 {% else %} twg-border twg-border-accent-600{% endif %}"
+              >
+                <svg
+                  width="20"
+                  height="22"
+                  viewBox="0 0 20 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19 10V9C19 5.22876 19 3.34315 17.7595 2.17157C16.519 1 14.5225 1 10.5294 1L9.47059 1C5.47752 1 3.48098 1 2.24049 2.17157C1 3.34315 1 5.22876 1 9L1 13C1 16.7712 1 18.6569 2.24049 19.8284C3.48098 21 5.47751 21 9.47059 21H10"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M6 6H14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M6 11H11"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M19 19.6471L19 16C19 14.5706 17.6569 13 16 13C14.3431 13 13 14.5706 13 16L13 19.5C13 20.2797 13.7326 21 14.6364 21C15.5401 21 16.2727 20.2797 16.2727 19.5L16.2727 16.7647"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="twg-flex-1">
+                <h3
+                  class="lg:twg-text-14px max-lg:twg-text-12px twg-font-medium twg-text-dark-100"
+                >
+                  {{ lesson.title }}
+                </h3>
+                <p
+                  class="lg:twg-text-14px max-lg:twg-text-13px twg-text-dark-100/70"
+                >
+                  {{ lesson.description }}
+                </p>
+              </div>
+            </div>
+            <button
+              class="twg-mt-5 twg-px-14px twg-py-10px twg-leading-none twg-rounded-lg twg-text-14px twg-font-medium twg-uppercase twg-transition-opacity twg-duration-300 twg-ease-linear hover:twg-opacity-80 twg-h-40px twg-w-full twg-flex twg-items-center twg-justify-center twg-gap-3 twg-border {% if lesson.active %} twg-bg-primary-100 twg-text-white twg-border-primary-100 {% else %} twg-border-accent-600{% endif %}"
+            >
+              <span>Course Material</span>
+              <svg
+                width="15"
+                height="19"
+                viewBox="0 0 15 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="twg-h-18px twg-w-auto"
+              >
+                <path
+                  d="M5.11981 8.40915L5.29225 8.23671C6.9412 6.58776 9.61467 6.58776 11.2636 8.23671C12.9126 9.88566 12.9126 12.5591 11.2636 14.2081L8.87507 16.5966C7.22612 18.2456 4.55265 18.2456 2.9037 16.5966C1.25476 14.9477 1.25476 12.2742 2.9037 10.6253L3.29066 10.2383"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M11.7097 8.76153L12.0966 8.37458C13.7456 6.72563 13.7456 4.05216 12.0966 2.40321C10.4477 0.754267 7.7742 0.754267 6.12526 2.40321L3.73671 4.79176C2.08776 6.44071 2.08776 9.11418 3.73671 10.7631C5.38566 12.4121 8.05913 12.4121 9.70808 10.7631L9.88051 10.5907"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="twg-flex twg-justify-end lg:twg-mb-5">
+      <button data-target="lesson_feedback" class="twg-main-btn twg-modal-open">
+        <span class="twg-uppercase">Finish Practice</span>
+        <i class="fa-solid fa-arrow-right twg-ml-3"></i>
+      </button>
+    </div>
+  </div>
+</section>
+<div
+  id="lesson_feedback"
+  class="twg-model twg-hidden twg-fixed twg-inset-0 twg-size-full twg-z-[999999] twg-bg-dark-100/50 twg-place-items-center twg-overflow-y-auto twg-py-8 twg-px-5 twg-h-screen"
+>
+  <div
+    class="twg-max-w-533px twg-w-full twg-z-10 twg-rounded-[10px] twg-bg-white twg-p-[30px] twg-flex twg-items-center twg-justify-center twg-flex-col twg-gap-3 twg-relative"
+  >
+    {% include "model-close.njk" %}
+    <div class="twg-relative twg-space-y-3 twg-w-full">
+      <div
+        class="twg-flex twg-flex-col twg-items-center twg-text-center twg-space-y-[10px]"
+      >
+        <dotlottie-player
+          src="https://lottie.host/ebe930ad-d9f6-4a7b-aea7-c0bba13b7989/BgDVJGL9t8.lottie"
+          background="transparent"
+          speed="1"
+          class="twg-size-203px"
+          loop
+          autoplay
+        ></dotlottie-player>
+        <h2
+          class="lg:twg-text-20px max-lg:twg-text-18px twg-font-semibold twg-text-primary-100"
+        >
+          Practice Complete! <br />
+          Ready for Your Next Lesson?
+        </h2>
+        <p
+          class="lg:twg-text-16px max-lg:twg-text-14px twg-text-light-200 twg-text-center"
+        >
+          Great job on completing your practice for Lesson Mathematics Practice
+          Lesson 3/12 ! Keep up the momentum by scheduling your next lesson.
+        </p>
+        <div class="twg-pt-2 twg-w-full">
+          <button
+            data-target="schedule_your_next_lesson"
+            class="twg-modal-open twg-px-14px twg-py-10px twg-leading-none twg-bg-primary-100 twg-text-14px twg-font-medium twg-text-white twg-transition-opacity twg-duration-300 twg-ease-linear hover:twg-opacity-80 twg-h-37px twg-text-center twg-w-full twg-rounded-7px"
+          >
+            Schedule Next Lesson
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  id="schedule_your_next_lesson"
+  class="twg-model twg-hidden twg-fixed twg-inset-0 twg-size-full twg-z-[999999] twg-bg-dark-100/50 twg-place-items-center twg-overflow-y-auto twg-py-8 twg-px-5 twg-h-screen"
+>
+  <div
+    class="twg-max-w-910px twg-w-full twg-z-10 twg-rounded-[10px] twg-bg-white twg-p-[20px] twg-flex twg-items-center twg-justify-center twg-flex-col twg-gap-3 twg-relative"
+  >
+    {% include "model-close.njk" %}
+    <div class="twg-relative twg-space-y-3 twg-w-full">
+      <div class="twg-flex twg-flex-col twg-items-center twg-mt-6">
+        <h2
+          class="lg:twg-text-20px max-lg:twg-text-18px twg-font-semibold twg-text-primary-100 twg-text-center"
+        >
+          Schedule Your Next Lesson
+        </h2>
+        <p
+          class="lg:twg-text-16px max-lg:twg-text-14px twg-text-light-200 twg-text-center"
+        >
+          Pick your teacher, date, and time to continue your learning journey.
+        </p>
+        <form
+          id="schedule_lesson"
+          class="schedule_lesson lg:twg-space-y-5 max-lg:twg-space-y-3 twg-w-full twg-mt-5"
+        >
+          {% include "schedule.njk" %}
+          <div class="twg-w-full">
+            <button
+              type="button"
+              data-target="confirmation_your_next_lesson"
+              class="twg-modal-open twg-main-btn twg-w-full"
+            >
+              Confirm Schedule
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  id="confirmation_your_next_lesson"
+  class="twg-model twg-hidden twg-fixed twg-inset-0 twg-size-full twg-z-[999999] twg-bg-dark-100/50 twg-place-items-center twg-overflow-y-auto twg-py-8 twg-px-5 twg-h-screen"
+>
+  <div
+    class="twg-max-w-910px twg-w-full twg-z-10 twg-rounded-[10px] twg-bg-white twg-p-[20px] twg-flex twg-items-center twg-justify-center twg-flex-col twg-gap-3 twg-relative"
+  >
+    {% include "model-close.njk" %}
+    <div class="twg-relative twg-space-y-3 twg-w-full">
+      <div class="twg-flex twg-flex-col twg-items-center twg-mt-6">
+        <h2
+          class="lg:twg-text-20px max-lg:twg-text-18px twg-font-semibold twg-text-primary-100 twg-text-center"
+        >
+          Confirm Your Lesson Schedule
+        </h2>
+        <p
+          class="lg:twg-text-16px max-lg:twg-text-14px twg-text-light-200 twg-text-center"
+        >
+          Pick your teacher, date, and time to continue your learning journey.
+        </p>
+        <form
+          id="confrim_lesson"
+          class="confrim_lesson lg:twg-space-y-5 max-lg:twg-space-y-3 twg-w-full twg-mt-5"
+        >
+          <div
+            class="twg-grid lg:twg-grid-cols-2 lg:twg-gap-5 max-lg:twg-gap-3"
+          >
+            <div class="twg-relative">
+              <label
+                for="confirm_course_name"
+                class="twg-text-12px twg-text-neutral-700 twg-font-semibold twg-mb-3px twg-block"
+                >Course Name</label
+              >
+              <input
+                id="confirm_course_name"
+                name="confirm_course_name"
+                type="text"
+                class="twg-text-10px twg-font-semibold twg-rounded-10px twg-border !twg-border-light-800 twg-text-dark-100 !twg-ring-0 !twg-outline-none !twg-shadow-none twg-leading-[17px] twg-uppercase twg-h-40px twg-w-full"
+                placeholder="Mathematics"
+              />
+            </div>
+            <div class="twg-relative">
+              <label
+                for="confirm_course_name"
+                class="twg-text-12px twg-text-neutral-700 twg-font-semibold twg-mb-3px twg-block"
+                >Lesson Name</label
+              >
+              <input
+                id="confirm_course_name"
+                name="confirm_course_name"
+                type="text"
+                class="twg-text-10px twg-font-semibold twg-rounded-10px twg-border !twg-border-light-800 twg-text-dark-100 !twg-ring-0 !twg-outline-none !twg-shadow-none twg-leading-[17px] twg-uppercase twg-h-40px twg-w-full"
+                placeholder="Advanced Algebra - Lesson 4x"
+              />
+            </div>
+          </div>
+          <!-- {% include "schedule-lesson-profile.njk" %} -->
+          {% include "schedule-lesson-profile-mobile.njk" %} {% include
+          "additional-notes.njk" %}
+          <div
+            class="twg-w-full twg-flex max-lg:twg-flex-col lg:twg-gap-5 max-lg:twg-gap-3"
+          >
+            <!-- data-target="confirmation_your_next_lesson" -->
+            <button
+              type="button"
+              class="twg-model-close twg-border !twg-border-dark-100 twg-px-24px twg-py-10px twg-leading-none twg-bg-transparent twg-rounded-lg twg-text-14px twg-font-medium twg-text-dark-100 twg-uppercase twg-transition-opacity twg-duration-300 twg-ease-linear hover:twg-opacity-80 twg-h-37px twg-text-center twg-whitespace-nowrap lg:twg-w-175px"
+            >
+              Go Back and Edit
+            </button>
+            <button
+              data-target="confirmation_thank_you"
+              class="twg-modal-open twg-main-btn twg-w-full"
+            >
+              Confirm Schedule
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  id="confirmation_thank_you"
+  class="twg-model twg-hidden twg-fixed twg-inset-0 twg-size-full twg-z-[999999] twg-bg-dark-100/50 twg-place-items-center twg-overflow-y-auto twg-py-8 twg-px-5 twg-h-screen"
+>
+  <div
+    class="twg-max-w-553px twg-w-full twg-z-10 twg-rounded-[10px] twg-bg-white twg-p-[20px] twg-flex twg-items-center twg-justify-center twg-flex-col twg-gap-3 twg-relative"
+  >
+    {% include "model-close.njk" %}
+    <div class="twg-relative twg-space-y-3 twg-w-full">
+      <div class="twg-flex twg-flex-col twg-items-center">
+        <dotlottie-player
+          src="https://lottie.host/ebe930ad-d9f6-4a7b-aea7-c0bba13b7989/BgDVJGL9t8.lottie"
+          background="transparent"
+          speed="1"
+          class="twg-size-203px"
+          loop
+          autoplay
+        ></dotlottie-player>
+        <h2
+          class="lg:twg-text-20px max-lg:twg-text-18px twg-font-semibold twg-text-primary-100 twg-text-center"
+        >
+          Schedule Lesson Successful
+        </h2>
+        <p
+          class="lg:twg-text-16px max-lg:twg-text-14px twg-text-light-200 twg-text-center"
+        >
+          Great job on scheduling your lesson Successfully
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
