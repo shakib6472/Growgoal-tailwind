@@ -1,0 +1,32 @@
+{
+  "name": "grow-goal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss src/assets/css/tailwind.css -o dist/assets/css/styles.css",
+    "watch:css": "postcss src/assets/css/tailwind.css -o dist/assets/css/styles.css --watch",
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "dev": "npm run watch:css & npm run build & npm run serve",
+    "start": "concurrently \"npm run serve\" \"npm run watch:css\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "autoprefixer": "^10.4.19",
+    "browser-sync": "^3.0.2",
+    "concurrently": "^8.2.2",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "nunjucks": "^3.2.4",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animation-delay": "^1.2.0"
+  }
+}
