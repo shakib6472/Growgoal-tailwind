@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@font-face {
+  font-family: "braked";
+  src: url("./fonts/braked-bold.otf");
+  font-weight: normal;
+  font-style: 700;
+}
+@font-face {
+  font-family: "braked";
+  src: url("./fonts/braked-semibold.otf");
+  font-weight: normal;
+  font-style: 600;
+}
+@font-face {
+  font-family: "braked";
+  src: url("./fonts/braked.otf");
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --primary-100: 116, 77, 230;
+  --primary-200: 5, 132, 244;
+  --dark-100: 0, 0, 0;
+  --dark-200: 36, 36, 36;
+  --light-100: 204, 204, 204;
+  --light-200: 62, 62, 62;
+  --light-300: 64, 64, 64;
+  --light-400: 241, 245, 249;
+  --light-500: 107, 107, 108;
+  --light-600: 181, 181, 181;
+  --light-700: 117, 117, 117;
+  --light-800: 147, 147, 147;
+  --secondary-100: 250, 219, 92;
+  --secondary-200: 250, 149, 243;
+  --secondary-300: 82, 82, 83;
+  --secondary-400: 238, 232, 255;
+  --secondary-500: 230, 221, 255;
+  --secondary-600: 248, 246, 255;
+  --secondary-700: 238, 234, 255;
+  --secondary-800: 226, 226, 226;
+  --accent-100: 255, 255, 255;
+  --accent-200: 237, 237, 237;
+  --accent-300: 211, 211, 211;
+  --accent-400: 128, 128, 128;
+  --accent-500: 239, 239, 239;
+  --accent-600: 222, 222, 222;
+  --success-100: 13, 203, 66;
+  --success-200: 39, 222, 191;
+  --success-300: 219, 255, 249;
+  --success-400: 30, 188, 97;
+  --success-500: 65, 211, 126;
+  --success-600: 37, 140, 96;
+  --danger-100: 255, 235, 235;
+  --danger-200: 230, 31, 25;
+  --body-font: "Nunito";
+  --font-primary: "braked";
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px; /* Set a height for horizontal scrolling */
+  background: transparent;
+}
+
+/* Track style */
+/* ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px transparent;
+  background: transparent;
+} */
+
+/* Thumb style */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--primary-100), 1);
+  border-radius: 12px;
+}
+
+/* Thumb hover effect */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--primary-100), 1);
+} */
+
+
+.twg-sidebar-link:not(.active) .twg-sidebar-active-bar,
+.twg-sidebar-link:not(.active) .twg-sidebar-active-svg {
+  @apply twg-invisible;
+}
+.twg-sidebar-link:not(.active) .twg-sidebar-item {
+  @apply twg-font-normal twg-text-accent-100;
+}
+.twg-sidebar-link.active .twg-sidebar-item {
+  @apply twg-bg-accent-100 twg-font-semibold twg-text-dark-100;
+}
+
+.twg-hide-scrollbar::-webkit-scrollbar,
+.twg-hide-scrollbar::-webkit-scrollbar-thumb,
+.twg-main-aside::-webkit-scrollbar,
+.twg-main-aside::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+select {
+  padding-right: 27px;
+  background-position: right 5px center;
+}
+
+.main-heading {
+  @apply twg-font-primary lg:twg-text-30px max-lg:twg-text-24px twg-text-primary-100 twg-leading-none twg-uppercase;
+}
+
+.twg-main-btn {
+  @apply twg-px-14px twg-py-10px twg-leading-none twg-bg-primary-100 twg-rounded-lg twg-text-14px twg-font-medium twg-text-white twg-transition-opacity twg-duration-300 twg-ease-linear hover:twg-opacity-80 twg-h-37px twg-text-center;
+}
+
+.dropdown-action-icon {
+  @apply twg-transition-transform twg-duration-300 twg-ease-linear;
+}
+
+.twg-custom-shadow {
+  @apply twg-shadow-[3px_3px_0px_black];
+}
+
+.chart-container {
+  position: relative;
+  width: 300px; /* Set consistent width */
+  height: 300px; /* Set consistent height */
+}
+#outerChart, #innerChart {
+  position: absolute; /* Allows layering */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.twg-custom-calendar .fc .fc-daygrid-day.fc-day-today {
+  @apply twg-bg-transparent;
+}
+.twg-custom-calendar .fc-daygrid-day-frame:has(.fc-daygrid-event-harness) .fc-daygrid-day-bg {
+  @apply twg-absolute twg-inset-0 twg-bg-[rgba(116,77,230,0.1)]
+}
+.twg-custom-calendar .fc-daygrid-day-frame.fc-scrollgrid-sync-inner {
+  @apply twg-p-10px
+}
+.twg-custom-calendar .fc-daygrid-day-frame.fc-scrollgrid-sync-inner {
+  @apply !twg-h-76px;
+}
+.twg-custom-calendar .fc-daygrid-day-top {
+  @apply twg-flex-row;
+}
+.twg-custom-calendar .fc-monthDropdown-button {
+  @apply !twg-hidden;
+}
+.twg-custom-calendar #fc-dom-1 {
+  @apply !twg-inline;
+}
+.twg-custom-calendar .fc-toolbar-chunk {
+  @apply !twg-flex !twg-items-center max-lg:twg-flex-wrap max-lg:twg-w-full;
+}
+.twg-custom-calendar #month-dropdown {
+  @apply !twg-py-1 !twg-px-3 max-lg:!twg-ml-0 max-lg:!twg-mb-0 !twg-rounded-md !twg-border-primary-100 !twg-outline-none !twg-shadow-none !twg-ring-0 !twg-min-w-[130px];
+}
+.twg-custom-calendar .fc-scheduleButton-button {
+  @apply twg-main-btn sm:twg-w-114px !twg-border-none hover:!twg-bg-primary-100 !twg-ring-0 !twg-outline-none !twg-shadow-none;
+}
+.twg-custom-calendar .fc-searchButton-button, .twg-custom-calendar .fc-menuButton-button {
+  @apply twg-size-37px twg-rounded-full !twg-bg-light-400 !twg-p-0 twg-overflow-hidden twg-grid twg-place-items-center twg-relative !twg-border-none !twg-outline-none !twg-shadow-none !twg-ring-0;
+}
+
+.twg-custom-calendar .fc-searchButton-button::before {
+  content: "\f002";
+}
+
+.twg-custom-calendar .fc-menuButton-button::before {
+  content: "\f0c9";
+}
+.twg-custom-calendar .fc-searchButton-button::before,
+.twg-custom-calendar .fc-menuButton-button::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 16px;
+  color: #6A778B;
+}
+.twg-custom-calendar .fc-header-toolbar.fc-toolbar.fc-toolbar-ltr {
+  @apply !twg-px-5 !twg-py-4 !twg-mb-0 max-lg:twg-flex-col max-lg:twg-gap-1;
+}
+.twg-custom-calendar .fc-col-header-cell-cushion {
+  @apply !twg-text-12px !twg-font-normal !twg-text-[#333333];
+}
+.twg-custom-calendar .fc-daygrid-day-frame.fc-scrollgrid-sync-inner {
+  @apply !twg-flex !twg-flex-col;
+}
+.twg-custom-calendar .fc-daygrid-day-events {
+  @apply !twg-mt-auto !twg-min-h-fit;
+}
+.twg-custom-calendar .fc-daygrid-event-dot {
+  @apply !twg-ml-0;
+  --fc-daygrid-event-dot-width: 5px;
+}
+.twg-custom-calendar .fc-event-time {
+  @apply !twg-mr-0 !twg-order-4;
+}
+.twg-custom-calendar .fc-event-time,
+.twg-custom-calendar .fc-event-title {
+  @apply !twg-text-10px twg-text-[#333333] !twg-font-medium;
+}
+.twg-custom-calendar .fc-daygrid-dot-event {
+  @apply !twg-bg-transparent;
+}
+.twg-custom-calendar .fc-event-title-container {
+  @apply !twg-flex !twg-items-center !twg-justify-center !twg-px-1 twg-h-23px;
+}
+/* .twg-custom-calendar .fc-col-header-cell.fc-day ,
+.twg-custom-calendar .fc-day.fc-day-mon.fc-daygrid-day {
+  @apply !twg-w-120px;
+} */
+
+.twg-custom-calendar .fc-theme-standard td, 
+.twg-custom-calendar .fc-theme-standard th {
+  @apply !twg-w-120px;
+}
+.twg-custom-calendar .fc-scroller-liquid-absolute {
+  @apply max-lg:!twg-overflow-scroll;
+}
+
+.twg-custom-calendar .fc-theme-standard td {
+  @apply !twg-h-120px
+}

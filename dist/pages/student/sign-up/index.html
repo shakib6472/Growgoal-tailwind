@@ -1,0 +1,273 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grow Goal | Sign Up</title>
+    <link rel="stylesheet" href="../../../assets/css/tailwind.css" />
+    <link rel="stylesheet" href="../../../assets/css/styles.css" />
+    <link rel="icon" href="../../../assets/images/fav-icon.png" type="image/png" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
+  </head>
+  <body
+    class="font-body bg-accent-100 twg-flex twg-flex-col twg-h-screen twg-overflow-hidden"
+  >
+    
+    <main
+      class="twg-flex-1 twg-flex twg-flex-col  twg-h-screen "
+    >
+      
+
+
+<section
+  class="lg:twg-pl-20 max-lg:twg-px-5 lg:twg-py-20 max-lg:twg-py-6 twg-max-w-[1440px] twg-mx-auto twg-w-full twg-h-screen twg-relative twg-overflow-y-auto"
+>
+  <img
+    src="../../../assets/images/concept-back-school-img.png"
+    alt=""
+    class="twg-absolute twg-left-560px twg-top-5 max-lg:twg-hidden"
+  />
+  <div
+    class="lg:twg-max-w-560px max-lg:twg-max-w-544px twg-w-full twg-flex twg-flex-col max-lg:twg-mx-auto"
+  >
+    <div
+      class="twg-flex twg-items-center max-lg:twg-mx-auto twg-justify-between twg-gap-5 twg-w-full"
+    >
+      <img
+        src="../../../assets/images/growgoal-dark-logo.png"
+        class="lg:twg-w-257px max-lg:twg-w-150px"
+        alt=""
+      />
+    </div>
+    <div
+      class="twg-mt-8 twg-max-w-544px twg-w-full lg:twg-space-y-10 max-lg:twg-space-y-6"
+    >
+      <div>
+        <h1
+          class="twg-text-primary-100 twg-font-bold lg:twg-text-32px max-lg:twg-text-26px"
+        >
+          Create Your Account
+        </h1>
+        <p class="lg:twg-text-16px max-lg:twg-text-14px twg-text-light-200">
+          Join us to unlock your potential!
+        </p>
+      </div>
+
+      <form class="twg-space-y-5 sign-up-form" id="sign-up-form">
+         
+        <div class="twg-grid lg:twg-grid-cols-2 twg-gap-5">
+          
+          <div class="twg-relative twg-gap-y-1 twg-flex twg-flex-col">
+            <label
+              class="twg-text-14px twg-font-semibold twg-text-light-300"
+              for="firstName"
+            >
+              First Name
+            </label>
+            <div class="twg-relative twg-text-light-300">
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                class="twg-py-10px twg-px-4 twg-border twg-border-light-100 twg-text-14px twg-bg-transparent twg-rounded-lg !twg-shadow-none !twg-ring-0 twg-w-full"
+                placeholder="Enter your first name"
+              />
+              
+            </div>
+          </div>
+            
+          <div class="twg-relative twg-gap-y-1 twg-flex twg-flex-col">
+            <label
+              class="twg-text-14px twg-font-semibold twg-text-light-300"
+              for="lastName"
+            >
+              Last Name
+            </label>
+            <div class="twg-relative twg-text-light-300">
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                class="twg-py-10px twg-px-4 twg-border twg-border-light-100 twg-text-14px twg-bg-transparent twg-rounded-lg !twg-shadow-none !twg-ring-0 twg-w-full"
+                placeholder="Enter your last name"
+              />
+              
+            </div>
+          </div>
+          
+        </div>
+          
+          <div class="twg-relative twg-gap-y-1 twg-flex twg-flex-col">
+            <label
+              class="twg-text-14px twg-font-semibold twg-text-light-300"
+              for="email"
+            >
+              Email
+            </label>
+            <div class="twg-relative twg-text-light-300">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="twg-py-10px twg-px-4 twg-border twg-border-light-100 twg-text-14px twg-bg-transparent twg-rounded-lg !twg-shadow-none !twg-ring-0 twg-w-full"
+                placeholder="Enter your email address."
+              />
+              
+            </div>
+          </div>
+            
+          <div class="twg-relative twg-gap-y-1 twg-flex twg-flex-col">
+            <label
+              class="twg-text-14px twg-font-semibold twg-text-light-300"
+              for="dob"
+            >
+              Date of Birth
+            </label>
+            <div class="twg-relative twg-text-light-300">
+              <input
+                type="date"
+                name="dob"
+                id="dob"
+                class="twg-py-10px twg-px-4 twg-border twg-border-light-100 twg-text-14px twg-bg-transparent twg-rounded-lg !twg-shadow-none !twg-ring-0 twg-w-full"
+                placeholder="Enter date of birth"
+              />
+              
+            </div>
+          </div>
+            
+          <div class="twg-relative twg-gap-y-1 twg-flex twg-flex-col">
+            <label
+              class="twg-text-14px twg-font-semibold twg-text-light-300"
+              for="password"
+            >
+              Password
+            </label>
+            <div class="twg-relative twg-text-light-300">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="twg-py-10px twg-px-4 twg-border twg-border-light-100 twg-text-14px twg-bg-transparent twg-rounded-lg !twg-shadow-none !twg-ring-0 twg-w-full"
+                placeholder="Enter
+your password."
+              />
+              
+              <button
+                type="button"
+                class="password-viewer-button twg-absolute twg-top-1/2 -twg-translate-y-1/2 twg-right-5"
+                data-target="password"
+              >
+                <i class="fa-solid fa-eye"></i>
+              </button>
+              
+            </div>
+          </div>
+            
+          <div class="twg-relative twg-gap-y-1 twg-flex twg-flex-col">
+            <label
+              class="twg-text-14px twg-font-semibold twg-text-light-300"
+              for="confirmPassword"
+            >
+              Confirm Password
+            </label>
+            <div class="twg-relative twg-text-light-300">
+              <input
+                type="password"
+                name="confirmPassword"
+                id="confirmPassword"
+                class="twg-py-10px twg-px-4 twg-border twg-border-light-100 twg-text-14px twg-bg-transparent twg-rounded-lg !twg-shadow-none !twg-ring-0 twg-w-full"
+                placeholder="Confirm your password."
+              />
+              
+              <button
+                type="button"
+                class="password-viewer-button twg-absolute twg-top-1/2 -twg-translate-y-1/2 twg-right-5"
+                data-target="confirmPassword"
+              >
+                <i class="fa-solid fa-eye"></i>
+              </button>
+              
+            </div>
+          </div>
+           
+        <div class="twg-relative">
+          <button
+            type="submit"
+            class="twg-w-full twg-px-28px twg-py-14px twg-bg-primary-100 twg-rounded-lg twg-text-16px twg-font-semibold twg-text-white twg-transition-opacity twg-duration-300 twg-ease-linear hover:twg-opacity-80 sign-up-form-submit"
+          >
+            Sign Up
+          </button>
+        </div>
+      </form>
+      <div class="twg-flex twg-items-center twg-justify-center twg-relative">
+        <div class="twg-px-4 twg-bg-white twg-relative twg-z-1">
+          <p class="twg-text-dark-100 twg-text-15px">or</p>
+        </div>
+        <div
+          class="twg-absolute twg-left-0 twg-top-50/100 -twg-translate-y-1/2 twg-bg-light-100 twg-h-1px twg-w-full"
+        ></div>
+      </div>
+      <div class="lg:twg-space-y-5 max-lg:twg-space-y-4">
+        <button
+          type="submit"
+          class="twg-w-full twg-px-28px twg-py-14px twg-border twg-border-light-100 twg-rounded-lg twg-text-16px twg-font-semibold twg-text-dark-100 twg-flex twg-items-center twg-justify-center twg-gap-2"
+        >
+          <img src="../../../assets/images/google-icon.svg" class="twg-relative" alt="" />
+          <span>Continue with Google</span>
+        </button>
+        <button
+          type="submit"
+          class="twg-w-full twg-px-28px twg-py-14px twg-border twg-border-light-100 twg-rounded-lg twg-text-16px twg-font-semibold twg-text-dark-100 twg-flex twg-items-center twg-justify-center twg-gap-2"
+        >
+          <img src="../../../assets/images/facebook-icon.svg" class="twg-relative" alt="" />
+          <span>Continue with Facebook</span>
+        </button>
+      </div>
+      <div class="twg-flex twg-items-center twg-justify-center">
+        <button
+          type="submit"
+          class="twg-text-16px twg-text-dark-100 twg-flex twg-items-center twg-justify-center twg-gap-2"
+        >
+          <span>Don’t have an account?</span>
+          <a
+            href="/pages/student/sign-in/"
+            class="twg-font-semibold twg-text-primary-100"
+            >Sign In</a
+          >
+        </button>
+      </div>
+    </div>
+  </div>
+  <dotlottie-player
+    src="https://lottie.host/13f8bf1e-756b-4d17-a934-c973270fb9a6/FPKglFcAvC.lottie"
+    background="transparent"
+    speed="1"
+    class="max-lg:twg-hidden twg-fixed twg-top-1/2 -twg-translate-y-1/2 twg-right-0 xl:twg-max-w-[746px] twg-h-393px mm-lg-xl:twg-max-w-[40%] twg-pointer-events-none"
+    loop
+    autoplay
+  ></dotlottie-player>
+</section>
+
+    </main>
+    <div
+      class="twg-fixed twg-inset-0 twg-size-full twg-z-20 twg-backdrop-blur-[4px] twg-overlay twg-hidden"
+    ></div>
+    <script src="../../../assets/js/script.js"></script>
+  </body>
+</html>
